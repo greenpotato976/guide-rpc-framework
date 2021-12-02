@@ -12,6 +12,10 @@ public class HelloController {
     @RpcReference(version = "version1", group = "test1")
     private HelloService helloService;
 
+    /**
+     * 测试测试
+     * @throws InterruptedException
+     */
     public void test() throws InterruptedException {
         String hello = this.helloService.hello(new Hello("111", "222"));
         //如需使用 assert 断言，需要在 VM options 添加参数：-ea
